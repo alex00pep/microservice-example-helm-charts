@@ -10,7 +10,7 @@ graphql:
     appName: graphql
     role: api
     containerName: graphql-container
-    imageRepository: lukondefmwila/ecommerce-graphql
+    imageRepository: ghcr.io/alex00pep/ecommerce-graphql
     imageTag: "0.1.5"
     port: 3002
   # Updated (New) Deployment resource

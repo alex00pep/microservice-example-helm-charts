@@ -10,7 +10,7 @@ products:
     appName: products
     role: api
     containerName: products-container
-    imageRepository: lukondefmwila/ecommerce-products
+    imageRepository: ghcr.io/alex00pep/ecommerce-products
     imageTag: 0.1.4
     port: 3004
   # Updated (New) Deployment resource
