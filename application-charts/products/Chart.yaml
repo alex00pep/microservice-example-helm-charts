@@ -3,8 +3,8 @@ description: The products microservice helm chart
 keywords:
   - products
 maintainers:
-  - email: outlier.developer@gmail.com
-    name: Luke Mwila
+  - email: alexmtnezf@gmail.com
+    name: Alexander Martinez
 name: products
 appVersion: "0.1.0"
 version: 0.1.0
