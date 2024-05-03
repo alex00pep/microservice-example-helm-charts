@@ -44,4 +44,4 @@ graphql:
     enabled: false
   # Canary Rollout
   canaryRollout:
-    enabled: false 
+    enabled: false
