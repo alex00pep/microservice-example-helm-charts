@@ -11,7 +11,7 @@ products:
     role: api
     containerName: products-container
     imageRepository: ghcr.io/alex00pep/ecommerce-products
-    imageTag: 0.1.4
+    imageTag: 0.1.5
     port: 3004
   # Updated (New) Deployment resource
   newDeployment:
