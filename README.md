@@ -13,8 +13,8 @@ The CI pipeline will update the app CD configuration files with the new image of
 ![Updates to app code in CI pipeline](image-1.png)
 
 ## Stage 2: Continuos Delivery process:
-ArgoCD allows the code repository (thats why the term GitOps) to be the source of truth. The app is redeployed on the K8s cluster with the new image tag per microservice.
-In such a way, even if the developer/ops team update the state of the application with kubectl command, ArgoCD will detect the change and redeploy the app to the desired state, using Helm charts.
+ArgoCD allows the code repository (thats why the term GitOps) to be the source of truth. The app is redeployed on the kubernetes cluster with the new image tag per microservice.
+In such a way, even if the developer/ops team updates the state of the application with kubectl command, ArgoCD will detect the change and redeploy the app to the desired state in git repository, using Helm charts.
 
 Alternatively, you can update the `Services` from a `ClusterIP` to `LoadBalancer`. 
 *It's a best practice to use an Ingress controller like the Load Balancer Controller to expose your applications to external traffic.*
@@ -31,10 +31,10 @@ The `application-charts` folder contains the Helm charts for both microservices.
 .
 |-- orders
 |   |-- Chart.yaml
-|   `-- dev-values.yaml
+|   `-- values-dev.yaml
 `-- products
 |   |-- Chart.yaml
-|   |`-- dev-values.yaml
+|   |`-- values-dev.yaml
 ```
 
 Example:
