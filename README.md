@@ -1,4 +1,4 @@
-# Ecommerce App - CI/CD eith Github Actions and ArgoCD
+# Ecommerce App - CI/CD with Github Actions and ArgoCD
 
 ## About the Microservices
 The applications used for demonstrative purposes are Orders and Products. The applications are written in JavaScript (NodeJS based APIs). The Orders API returns a list of orders, whereas the products API returns a list of products.
@@ -31,31 +31,10 @@ The `application-charts` folder contains the Helm charts for both microservices.
 .
 |-- orders
 |   |-- Chart.yaml
-|   |-- charts
-|   |-- orders.yaml
-|   |-- templates
-|   |   |-- NOTES.txt
-|   |   |-- _helpers.tpl
-|   |   |-- deployment.yaml
-|   |   |-- hpa.yaml
-|   |   |-- ingress.yaml
-|   |   |-- service.yaml
-|   |   |-- serviceaccount.yaml
-|   |   `-- tests
-|   `-- values.yaml
+|   `-- dev-values.yaml
 `-- products
-    |-- Chart.yaml
-    |-- charts
-    |-- templates
-    |   |-- NOTES.txt
-    |   |-- _helpers.tpl
-    |   |-- deployment.yaml
-    |   |-- hpa.yaml
-    |   |-- ingress.yaml
-    |   |-- service.yaml
-    |   |-- serviceaccount.yaml
-    |   `-- tests
-    `-- values.yaml
+|   |-- Chart.yaml
+|   |`-- dev-values.yaml
 ```
 
 Example:
@@ -70,7 +49,7 @@ When running the microservices locally or in your Amazon EKS cluster, you can us
 #### Orders 
 ```
 GET Orders - /v1/orders
-GET Orders and Products - /v1/orders/products
+GET Orders and Products - /v1/orders
 ``` 
 
 #### Products
