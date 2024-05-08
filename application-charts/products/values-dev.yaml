@@ -37,8 +37,15 @@ products:
   namespace:
     enabled: false
   # Ingress 
-  ingress:
-    enabled: false
+  ingress:    
+    name: products-dev-ingress
+    namespace: ecommerce-dev
+    enabled: true
+    host: products-dev.nane02.home.techfitsu.org
+    path: /
+    serviceName: products-service
+    servicePort: 3004
+    className: traefik
   # Horizontal Pod Autoscaler
   hpa:
     enabled: false
