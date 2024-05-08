@@ -40,7 +40,7 @@ orders:
   namespace:
     enabled: false
   # Ingress 
-  ingress:    
+  ingress:
     name: orders-dev-ingress
     namespace: ecommerce-dev
     enabled: true
@@ -49,6 +49,9 @@ orders:
     serviceName: orders-service
     servicePort: 3003
     className: traefik
+    tls:
+      enabled: true
+      secretName: home-production-tls
   # Canary Rollout # Canary Service object (for Argo Rollouts)
   canaryRollout:
     enabled: false
