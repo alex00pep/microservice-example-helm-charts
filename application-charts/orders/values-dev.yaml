@@ -8,7 +8,7 @@ orders:
   newDeployment:
     enabled: true
     name: orders
-    namespace: ecommerce
+    namespace: ecommerce-dev
     replicas: 3
     appName: orders
     role: api
@@ -23,12 +23,12 @@ orders:
   serviceAccount:
     enabled: true
     name: orders-service-account
-    namespace: ecommerce
+    namespace: ecommerce-dev
   # Stable Service object
   service:
     enabled: true
     name: orders-service
-    namespace: ecommerce
+    namespace: ecommerce-dev
     appName: orders
     type: ClusterIP
     servicePort: 3003
@@ -40,8 +40,15 @@ orders:
   namespace:
     enabled: false
   # Ingress 
-  ingress:
-    enabled: false
+  ingress:    
+    name: orders-dev-ingress
+    namespace: ecommerce-dev
+    enabled: true
+    host: orders-dev.nane02.home.techfitsu.org
+    path: /
+    serviceName: orders-service
+    servicePort: 3003
+    className: traefik
   # Canary Rollout # Canary Service object (for Argo Rollouts)
   canaryRollout:
     enabled: false
