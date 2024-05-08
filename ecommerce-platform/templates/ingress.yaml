@@ -8,8 +8,7 @@ metadata:
     app: {{ .Values.ingress.name }}
   annotations:
     kubernetes.io/ingress.class: {{ .Values.ingress.className }}
-    # add an annotation indicating the SSL cert issuer to use. This will provision a cert automatically
-    cert-manager.io/cluster-issuer: letsencrypt-production
+    
 spec:
   tls:
     - hosts:
