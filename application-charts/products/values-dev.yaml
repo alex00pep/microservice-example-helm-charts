@@ -46,6 +46,9 @@ products:
     serviceName: products-service
     servicePort: 3004
     className: traefik
+    tls:
+      enabled: true
+      secretName: home-production-tls
   # Horizontal Pod Autoscaler
   hpa:
     enabled: false
